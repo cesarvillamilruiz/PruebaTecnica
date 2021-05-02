@@ -1,0 +1,160 @@
+Pasos
+1. Descargar repositorio o ejecutar archivo adjunto en correo
+
+2. Por favor revisar y actualizarlas credeciales de la cadena de conexion ( User Id, Password)
+en el archivo appsetings.josn del proyecto Front
+
+3. Ejecutar en la consola de comandos de paquetes nuget los siguientes comandos:
+ (Seleccionar el proyecto Data_Access)
+
+- Add-Migration First
+- Update-Database
+
+El proyecto se encuentra en Code first y un Seeder por lo que la migracion creara las entidades en la base de datos.
+
+Tambien el seeder hara algunos insert al momento de ejecutar la aplicacion.
+
+
+
+A continuacion los servicios a ejecutar para interactuar con el proyecto Web Api, en caso de ser nesesario cambiar el puerto del servicio:
+
+STUDENTS
+
+https://localhost:44323/Student/Add_New_Student  POST
+{
+    "Names":"estudiante 7",
+    "LastNames":"student 7",
+    "BirthDate":"2012-04-05",
+    "Gender":1
+}
+
+https://localhost:44323/Student/Index GET
+
+
+https://localhost:44323/Student/Get_Student_By_Id/14  GET
+
+https://localhost:44323/Student/Update_Student PUT
+{
+    "Id":14,
+    "Names":"estudiante 7",
+    "LastNames":"student 7",
+    "BirthDate":"2012-04-05",
+    "GenderId":1
+}
+
+
+https://localhost:44323/Student/Delete_Student/1 DELETE 
+
+https://localhost:44323/Student/Add_Student_Course
+{
+    "StudentId":1,
+    "CourseId":1
+}
+
+
+
+
+ADDRESS
+
+https://localhost:44323/Address/Get_Address_From_Student/1 GET
+
+https://localhost:44323/Address/Add_New_Address POST
+{
+    "TextAddress":"Cll 13 # 89",
+    "AddressTypeId":2,
+    "StudentId":1
+}
+
+
+https://localhost:44323/Address/Update_Address PUT
+{
+    "Id":1,
+    "TextAddress":"Cll 13 # 999",
+    "AddressTypeId":2,
+    "StudentId":1
+}
+
+https://localhost:44323/Address/Delete_Address/1 DELETE
+
+
+
+
+AUTH USER
+https://localhost:44323/AuthUser/Add_New_User POST
+{
+    "User":"super",
+    "Password":"super",
+    "ConfirmPassword":"super",
+    "StudentId":1
+}
+
+
+https://localhost:44323/AuthUser/Login  POST
+{
+    "User":"super",
+    "Password":"super"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+QUERY'S
+SELECT * FROM Primestone.dbo.Course;
+
+SELECT * FROM Primestone.dbo.Address;
+
+SELECT * FROM Primestone.dbo.StudentCourse;
+
+SELECT * FROM Primestone.dbo.AddressType;
+
+SELECT * FROM Primestone.dbo.Gender;
+
+
+SELECT * FROM Primestone.dbo.DoWork;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
