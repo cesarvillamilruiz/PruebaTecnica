@@ -1,7 +1,7 @@
 Pasos
 1. Descargar repositorio o ejecutar archivo adjunto en correo
 
-2. Por favor revisar y actualizarlas credeciales de la cadena de conexion ( User Id, Password)
+2. Ejecutar el proyecto sin hacer migracion, sino funciona por favor revisar y actualizarlas credeciales de la cadena de conexion ( User Id, Password)
 en el archivo appsetings.josn del proyecto Front
 
 3. Ejecutar en la consola de comandos de paquetes nuget los siguientes comandos:
